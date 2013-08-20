@@ -20,7 +20,14 @@
 			   .data('h', elt.height())
 			   .svgify();
 		});
-		$('.img').svgify();
+		var 
+			nonImgElt = $('.img[data-svgsrc]'),
+			w = nonImgElt.width();
+			h = nonImgElt.height();
+		nonImgElt
+			.data('w', w)
+			.data('h', h)
+			.svgify();
 	});
 </script>
 	</body>
