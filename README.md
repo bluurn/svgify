@@ -17,19 +17,30 @@ Usage
 
 ```
     <img src="..." data-svgsrc="..."/>
-    <i class="myimage" data-svgsrc="..."></i>
+    <i class="img" data-svgsrc="..."></i>
 ```
 * Put this code in the `$(document).ready(...)` handler:
 
 ```
 $(document).ready(function () {
-    $('[data-svgsrc]').load(function () {
-        var elt = $(this);
-        elt
-            .data('w', elt.width())
-            .data('h', elt.height())
-            .svgify();
-    });
+	$(document).ready(function () {
+		$('img[data-svgsrc]').load(function () {
+			var elt = $(this);
+			elt
+			   .data('w', elt.width())
+			   .data('h', elt.height())
+			   .svgify();
+		});
+		var 
+			nonImgElt = $('.img[data-svgsrc]'),
+			w = nonImgElt.width();
+			h = nonImgElt.height();
+		nonImgElt
+			.data('w', w)
+			.data('h', h)
+			.svgify();
+	});
+
 });
 ```
 
