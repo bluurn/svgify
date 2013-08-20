@@ -24,7 +24,9 @@
 
 			}
 
-			if(!elt.children().length) {
+			if(elt.prop('tagName') !== "IMG" && !elt.children().length) {
+				var w = elt.width(),
+				    h = elt.height()
 				elt
 				   .css({background: 'none'})
 				   .html('<img src="' + svgsrc + '" />')
@@ -32,7 +34,6 @@
 				elt
 				   .find('img')
 				   .css({ width: w, height: h });
-
 			}
 		});
 
