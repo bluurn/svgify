@@ -13,13 +13,14 @@
 		<i class="img" data-svgsrc="img/smiley.svg"></i>
 <script>
 	$(document).ready(function () {
-		$('[data-svgsrc]').load(function () {
+		$('img[data-svgsrc]').load(function () {
 			var elt = $(this);
 			elt
 			   .data('w', elt.width())
 			   .data('h', elt.height())
 			   .svgify();
 		});
+		$('.img').svgify();
 	});
 </script>
 	</body>

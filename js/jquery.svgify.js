@@ -13,7 +13,7 @@
 				w = elt.data('w'),
 				h = elt.data('h');
 
-			if (elt.is('img')) {
+			if (elt.prop('tagName') === "IMG") {
 				elt
 				   .attr('src', svgsrc)
 				 .css({
@@ -22,7 +22,7 @@
 				   })
 				   .removeAttr('data-svgsrc');
 
-			} else if(elt.children().length > 0) {
+			} else if(!elt.children().length) {
 
 				elt.html('<img/>')
 						  .find('img')
