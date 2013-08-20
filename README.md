@@ -30,13 +30,6 @@ $(document).ready(function () {
 		   .data('h', elt.height())
 		   .svgify();
 	});
-	var 
-		nonImgElt = $('.img[data-svgsrc]'),
-		w = nonImgElt.width();
-		h = nonImgElt.height();
-	nonImgElt
-		.data('w', w)
-		.data('h', h)
-		.svgify();
+	$('.img[data-svgsrc]').svgify();
 });
 ```
