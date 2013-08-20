@@ -23,24 +23,20 @@ Usage
 
 ```
 $(document).ready(function () {
-	$(document).ready(function () {
-		$('img[data-svgsrc]').load(function () {
-			var elt = $(this);
-			elt
-			   .data('w', elt.width())
-			   .data('h', elt.height())
-			   .svgify();
-		});
-		var 
-			nonImgElt = $('.img[data-svgsrc]'),
-			w = nonImgElt.width();
-			h = nonImgElt.height();
-		nonImgElt
-			.data('w', w)
-			.data('h', h)
-			.svgify();
+	$('img[data-svgsrc]').load(function () {
+		var elt = $(this);
+		elt
+		   .data('w', elt.width())
+		   .data('h', elt.height())
+		   .svgify();
 	});
-
+	var 
+		nonImgElt = $('.img[data-svgsrc]'),
+		w = nonImgElt.width();
+		h = nonImgElt.height();
+	nonImgElt
+		.data('w', w)
+		.data('h', h)
+		.svgify();
 });
 ```
-
