@@ -1,6 +1,11 @@
-(function ($) {
+/**
+ * TODO: Move plugin initialization here!!!
+ */
+(function ($, window, undefined) {
+
+	var isSVGSupported = document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#BasicStructure", "1.1");
+
 	$.fn.svgify = function () {
-		var isSVGSupported = document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#BasicStructure", "1.1");
 		if (isSVGSupported) {
 			$(this).each(function () {
 
@@ -41,4 +46,4 @@
 
 		return this;
 	};
-})(jQuery);
+})(jQuery, window);
