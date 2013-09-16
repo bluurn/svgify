@@ -63,7 +63,7 @@ body {
 .content {  
 	padding-bottom: 80px;  
 }  
-.copyright {  
+.copyright__footer {  
 	position: absolute;
 	bottom: 0;
 	height: 67px;
@@ -71,10 +71,14 @@ body {
 	background: black;
 }
 
-.copyright > p {
+.copyright__footer-company {
 	font-family: 'Futura New Light', Tahoma, Helvetica;
 	padding-left: 384px;
 	color: #fff;
 	color: rgba(255,255,255,0.8);
 	padding-top: 36px;
 }
+
+.copyright__footer
+
+
